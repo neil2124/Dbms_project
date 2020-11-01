@@ -1,0 +1,28 @@
+<a href="/">Home</a>
+<h2><%= yourOrders[0].name %></h2>
+<h2><%= yourOrders[0].email %></h2>
+<h2><%= yourOrders[0].order_id %></h2>
+<h2><%= yourOrders[0].street_name %></h2>
+
+<br><br>
+<h2>Your Orders</h2>
+
+
+    <table>
+        <tr>
+            <th>Package</th>
+            <th>Shippment address</th>
+            <th>Shipment Status</th>
+            <th>Shipping Company</th>
+        </tr>
+        <% yourOrders.forEach(order =>{ %>
+            <tr>
+                <td><%= order.package %></td>
+                <td><%= order.shipped_from %></td>
+                <td><%= order.shipment_status %></td>
+                <td><%= order.name %></td>
+            </tr>
+
+        <% }) %>
+    </table>
+
